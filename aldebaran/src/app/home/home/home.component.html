@@ -1,0 +1,5 @@
+<app-shared-card *ngFor="let image of images"
+[title]="image.title"
+[url]="image.url"
+[btnText]="'Commentez'"
+>{{image.description}}</app-shared-card>

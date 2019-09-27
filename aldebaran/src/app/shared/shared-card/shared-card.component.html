@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="image">
+    <img [src]="url != '' ? url : defaultUrl" class="card-img-top" alt="..." />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text"><ng-content></ng-content></p>
+   </div>
+   <app-shared-button (click)="clickButton( $event )" big feedback raised  [visible]="btnText" mode="valid">{{btnText}}</app-shared-button>
+
+</div>

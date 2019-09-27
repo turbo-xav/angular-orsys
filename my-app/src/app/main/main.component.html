@@ -1,0 +1,29 @@
+<a
+[ngClass]="{
+  'btn-secondary': filter != letter,
+  'btn-primary': filter == letter
+}"
+*ngFor="let letter of letters"
+class="btn btn-primary letter"
+(click)="filter = letter">
+{{letter}}
+</a>
+<a class="btn btn-light" *ngIf="filter != ''" (click)="filter = null">Reset</a>
+<p>Filter : {{filter}}</p>
+<table class="table table-light">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" >
+      <td>{{user.id}}</td>
+      <td appZoom>{{user.name | civility}}</td>
+      <td (click)="delete(user.id)">--</td>
+    </tr>
+  </tbody>
+
+</table>

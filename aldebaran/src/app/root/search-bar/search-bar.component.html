@@ -1,0 +1,18 @@
+<form>
+    <div class="form-inline">
+      <a class="navbar-brand" href="#">Search</a>
+      <app-shared-button *ngIf="userInput != ''" (click)="userInput = ''" visible="true">X</app-shared-button>
+      <input
+      #searchField="ngModel"
+      [(ngModel)]="userInput"
+      required
+      minlength="3"
+      pattern="[a-z]{1,10}"
+      name="search"
+      class="form-control"
+      placeholder="Enter your search">
+      <app-shared-button (click)="searchHandler()" *ngIf="searchField.valid" visible="true" btnText="" >Search !</app-shared-button>
+      <app-shared-button *ngIf="searchField.invalid" [ngStyle]="{opacity:.5}" visible="true" btnText="" >Search !</app-shared-button>
+
+    </div>
+  </form>

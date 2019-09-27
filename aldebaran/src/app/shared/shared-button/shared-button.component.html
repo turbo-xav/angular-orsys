@@ -1,0 +1,8 @@
+<div *ngIf="visible" class="btn"
+[ngClass]="{
+  'btn-outline-primary': mode == 'cancel',
+  'btn-outline-secondary': mode == 'option',
+  'btn-primary': mode == 'valid'
+}">
+  <ng-content></ng-content>
+</div>

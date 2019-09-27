@@ -1,0 +1,12 @@
+:host {
+  display:flex;
+  justify-content: center;
+}
+:host > app-shared-card {
+  width:35%;
+}
+
+:host ::ng-deep > app-shared-card > div.card  {
+  width:90%;
+}
+

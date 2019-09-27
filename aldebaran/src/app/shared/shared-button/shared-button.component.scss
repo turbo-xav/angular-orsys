@@ -1,0 +1,34 @@
+div {
+  margin: 5px 5px 5px 120px;
+  border-radius:8px;
+}
+:host{
+  display:inline-block;
+  cursor:pointer;
+}
+
+:host[small] {
+  transform:scale(0.9);
+ }
+
+:host[big] {
+ transform:scale(1.1);
+}
+
+:host[raised] > div {
+  box-shadow:3px 3px 3px gray;
+}
+
+:host[feedback]:hover > div {
+
+  -webkit-transform: rotate(20deg) scale(1);
+  -webkit-transform-origin: 0 -250px;
+
+  -webkit-transition: transform 0.7s;
+
+  transform: rotate(2deg) scale(1.02);
+  transform-origin: 0 -250px;
+
+
+
+}
